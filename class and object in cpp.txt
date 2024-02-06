@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class sw
+{
+   public:
+    int x,y;
+    void get();
+    void dis();
+    void swap();
+};
+void sw::get(){
+    cout<<"Enter the value of X:";
+    cin>>x;
+    cout<<"Enter the value of y:";
+    cin>>y;
+}
+void sw::dis(){
+    cout<<"The X after Swap:"<<x<<endl;
+    cout<<"The y after Swap:"<<y;
+}
+void sw::swap()
+{
+    x=x+y;
+    y=x-y;
+    x=x-y;
+}
+int main() {
+   sw s;
+   s.get();
+   s.swap();
+   s.dis();
+    return 0;
+}
